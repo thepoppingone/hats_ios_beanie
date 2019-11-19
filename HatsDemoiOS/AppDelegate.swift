@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FBSDKCoreKit
 import Firebase
 import IQKeyboardManagerSwift
 
@@ -29,10 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     // Override point for customization after application launch.
     AnalyticsManager.shared.setup()
-    ApplicationDelegate.shared.application(
-      application, didFinishLaunchingWithOptions: launchOptions
-    )
-    
     IQKeyboardManager.shared.enable = true
 
     let rootVC = AppNavigator.shared.rootViewController
@@ -41,14 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     return true
   }
   
-  func application(
-    _ application: UIApplication, open url: URL,
-    sourceApplication: String?, annotation: Any
-  ) -> Bool {
-    return ApplicationDelegate.shared.application(application, open: url,
-                                                  sourceApplication: sourceApplication,
-                                                  annotation: annotation)
-  }
+//  func application(
+//    _ application: UIApplication, open url: URL,
+//    sourceApplication: String?, annotation: Any
+//  ) -> Bool {
+//    return ApplicationDelegate.shared.application(application, open: url,
+//                                                  sourceApplication: sourceApplication,
+//                                                  annotation: annotation)
+//  }
   
   func unexpectedLogout() {
     UserDataManager.deleteUser()

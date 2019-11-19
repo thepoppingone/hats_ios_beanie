@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FBSDKLoginKit
 
 protocol FirstViewModelDelegate: class {
   func didUpdateState()

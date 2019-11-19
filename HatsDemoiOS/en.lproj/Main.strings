@@ -26,8 +26,8 @@
 /* Class = "UILabel"; text = "You are signed in/up"; ObjectID = "deB-Nf-PW5"; */
 "deB-Nf-PW5.text" = "You are signed in/up";
 
-/* Class = "UILabel"; text = "Welcome to\nRS iOS BASE."; ObjectID = "nMy-eR-RsW"; */
-"nMy-eR-RsW.text" = "Welcome to\nRS iOS BASE.";
+/* Class = "UILabel"; text = "Welcome to\nHATS Beanie App."; ObjectID = "nMy-eR-RsW"; */
+"nMy-eR-RsW.text" = "Welcome to\nHATS Beanie App.";
 
 /* Class = "UIButton"; normalTitle = "SIGN UP"; ObjectID = "oRD-MA-2oV"; */
 "oRD-MA-2oV.normalTitle" = "SIGN UP";

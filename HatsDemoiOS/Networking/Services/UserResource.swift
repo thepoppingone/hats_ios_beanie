@@ -15,7 +15,6 @@ enum UserResource: TargetType {
   case signup(String, String, UIImage)
   case signupMultipart(String, String, UIImage)
   case profile
-  case fbLogin(String)
   case logout
 
   var path: String {
@@ -33,11 +32,11 @@ enum UserResource: TargetType {
     case .logout:
       return "\(authBasePath)/sign_out"
     }
-  }
+   }
 
   var method: Moya.Method {
     switch self {
-    case .signupMultipart, .signup, .login, .fbLogin:
+    case .signupMultipart, .signup, .login:
       return .post
     case .profile:
       return .get
@@ -68,11 +67,6 @@ enum UserResource: TargetType {
         email: email, password: password, avatar: avatar
       )
       return .uploadMultipart(multipartData(from: parameters, rootKey: "user"))
-    case .fbLogin(let token):
-      let parameters = [
-        "access_token": token
-      ]
-      return requestParameters(parameters: parameters)
     default:
       return .requestPlain
     }
@@ -112,3 +106,4 @@ enum UserResource: TargetType {
     ]
   }
 }
+
