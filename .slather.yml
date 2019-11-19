@@ -1,0 +1,6 @@
+coverage_service: cobertura_xml
+workspace: HatsDemoiOS.xcworkspace
+xcodeproj: HatsDemoiOS.xcodeproj
+scheme: HatsDemoiOS-develop
+ignore:
+  - Pods/*
