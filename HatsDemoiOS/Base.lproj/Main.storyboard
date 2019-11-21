@@ -67,7 +67,7 @@ HATS Beanie App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                 <connections>
-                                    <action selector="credentialsChanged:" destination="8qd-iW-5fg" eventType="editingChanged" id="Jfl-9Y-81W"/>
+                                    <action selector="credentialsChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="ko7-n4-ZaX"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-I4-fUt">
@@ -80,7 +80,7 @@ HATS Beanie App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
-                                    <action selector="credentialsChanged:" destination="8qd-iW-5fg" eventType="editingChanged" id="Wrb-CE-C4R"/>
+                                    <action selector="credentialsChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="GqX-tz-z56"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-bX-pA7">
@@ -121,7 +121,9 @@ HATS Beanie App</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="emailField" destination="x1o-d3-xUd" id="qNu-R3-452"/>
                         <outlet property="logInButton" destination="OVq-bX-pA7" id="QMy-UZ-cnK"/>
+                        <outlet property="passwordField" destination="O9P-I4-fUt" id="mgl-vW-DZ3"/>
                         <outlet property="signUp" destination="EN8-2n-nei" id="mGt-dJ-RXu"/>
                     </connections>
                 </viewController>

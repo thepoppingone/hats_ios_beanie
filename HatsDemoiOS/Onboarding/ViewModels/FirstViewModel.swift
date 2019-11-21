@@ -34,7 +34,7 @@ class FirstViewModel {
       delegate?.didUpdateCredentials()
     }
   }
-  
+    
   func signIn() {
 //    AppNavigator.shared.navigate(to: OnboardingRoutes.signIn, with: .push)
     self.login()

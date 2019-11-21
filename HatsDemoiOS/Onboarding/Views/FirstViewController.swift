@@ -13,6 +13,8 @@ class FirstViewController: UIViewController {
   // MARK: - Outlets
   @IBOutlet weak var logInButton: UIButton!
   @IBOutlet weak var signUp: UIButton!
+  @IBOutlet weak var emailField: UITextField!
+  @IBOutlet weak var passwordField: UITextField!
   
   var viewModel: FirstViewModel!
 //  var signInViewModel: SignInViewModelWithCredentials!
@@ -29,10 +31,19 @@ class FirstViewController: UIViewController {
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(true, animated: true)
   }
-  
-  
 
   // MARK: - Actions
+  @IBAction func credentialsChanged(_ sender: UITextField) {
+    let newValue = sender.text ?? ""
+    switch sender {
+    case emailField:
+      viewModel.email = newValue
+    case passwordField:
+      viewModel.password = newValue
+    default: break
+    }
+  }
+  
   @IBAction func signInTapped() {
     viewModel.login()
   }
