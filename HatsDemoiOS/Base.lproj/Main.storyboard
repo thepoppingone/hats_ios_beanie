@@ -40,9 +40,6 @@
                                 <accessibility key="accessibilityConfiguration" identifier="GoToSignUpButton">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="DCe-Ah-qyc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="24" minY="14" maxX="24" maxY="13"/>
                                 <state key="normal" title="Don’t have an account? Let’s create one ►">
@@ -60,14 +57,36 @@ HATS Beanie App</string>
                                 <color key="textColor" red="0.45508993310866014" green="0.41961441863798504" blue="0.40671423155773956" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-d3-xUd">
+                                <rect key="frame" x="32" y="283" width="311" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="EmailTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="d0z-wb-Tus"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <connections>
+                                    <action selector="credentialsChanged:" destination="8qd-iW-5fg" eventType="editingChanged" id="Jfl-9Y-81W"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-I4-fUt">
+                                <rect key="frame" x="32" y="331" width="311" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" identifier="PasswordTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3a5-xD-JOK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="credentialsChanged:" destination="8qd-iW-5fg" eventType="editingChanged" id="Wrb-CE-C4R"/>
+                                </connections>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-bX-pA7">
                                 <rect key="frame" x="87" y="551" width="201" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.76094285102739723" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="GoToSignInButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="ICR-xw-Heb"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="chz-DM-F9g"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="18" minY="14" maxX="18" maxY="13"/>
                                 <state key="normal" title="LOG IN">
@@ -81,14 +100,20 @@ HATS Beanie App</string>
                         <color key="backgroundColor" red="0.95331488715277779" green="0.95331488715277779" blue="0.95331488715277779" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="StartView"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EN8-2n-nei" secondAttribute="bottom" constant="18" id="0uu-hu-FDa"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nMy-eR-RsW" secondAttribute="trailing" constant="20" symbolic="YES" id="A5X-Hs-TIn"/>
-                            <constraint firstItem="nMy-eR-RsW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="22" id="Gwo-18-Uld"/>
-                            <constraint firstItem="EN8-2n-nei" firstAttribute="top" secondItem="OVq-bX-pA7" secondAttribute="bottom" constant="8" id="LOz-pk-phI"/>
-                            <constraint firstItem="nMy-eR-RsW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="QWv-2L-MoY"/>
-                            <constraint firstItem="EN8-2n-nei" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="Vzk-Jr-A7g"/>
-                            <constraint firstAttribute="trailing" secondItem="EN8-2n-nei" secondAttribute="trailing" constant="12" id="fep-Rk-VcS"/>
-                            <constraint firstItem="OVq-bX-pA7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j0q-ZA-Sud"/>
+                            <constraint firstItem="x1o-d3-xUd" firstAttribute="trailing" secondItem="O9P-I4-fUt" secondAttribute="trailing" id="0U3-am-ytb"/>
+                            <constraint firstItem="O9P-I4-fUt" firstAttribute="top" secondItem="x1o-d3-xUd" secondAttribute="bottom" constant="8" id="Liq-MO-Y8K"/>
+                            <constraint firstItem="EN8-2n-nei" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="PgL-zW-Uvw"/>
+                            <constraint firstItem="O9P-I4-fUt" firstAttribute="centerX" secondItem="OVq-bX-pA7" secondAttribute="centerX" id="Sg0-Jn-ZWo"/>
+                            <constraint firstItem="nMy-eR-RsW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="Ywa-YA-bVT"/>
+                            <constraint firstItem="x1o-d3-xUd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="283" id="ZuL-8E-5QZ"/>
+                            <constraint firstItem="x1o-d3-xUd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZzL-ej-cfo"/>
+                            <constraint firstItem="OVq-bX-pA7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="dJy-Le-VgN"/>
+                            <constraint firstItem="nMy-eR-RsW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="duw-BD-rth"/>
+                            <constraint firstItem="x1o-d3-xUd" firstAttribute="leading" secondItem="O9P-I4-fUt" secondAttribute="leading" id="idw-kV-UOY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EN8-2n-nei" secondAttribute="bottom" constant="18" id="jAv-uz-Xjw"/>
+                            <constraint firstItem="x1o-d3-xUd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="16" id="uOk-KZ-Ry8"/>
+                            <constraint firstItem="OVq-bX-pA7" firstAttribute="centerX" secondItem="EN8-2n-nei" secondAttribute="centerX" id="y7a-7z-8x0"/>
+                            <constraint firstItem="EN8-2n-nei" firstAttribute="top" secondItem="OVq-bX-pA7" secondAttribute="bottom" constant="8" id="zAO-F8-ONP"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
@@ -96,7 +121,7 @@ HATS Beanie App</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="signIn" destination="OVq-bX-pA7" id="PMG-yl-8ea"/>
+                        <outlet property="logInButton" destination="OVq-bX-pA7" id="QMy-UZ-cnK"/>
                         <outlet property="signUp" destination="EN8-2n-nei" id="mGt-dJ-RXu"/>
                     </connections>
                 </viewController>
@@ -128,36 +153,7 @@ HATS Beanie App</string>
                                 <state key="normal" title="LOG IN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="tapOnSignInButton:" destination="8qd-iW-5fg" eventType="touchUpInside" id="W66-SR-pZi"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SGW-mB-J78">
-                                <rect key="frame" x="32" y="289.5" width="311" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <accessibility key="accessibilityConfiguration" identifier="EmailTextField"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="f8Y-z2-1Kg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
-                                <connections>
-                                    <action selector="credentialsChanged:" destination="8qd-iW-5fg" eventType="editingChanged" id="p9X-w6-WzA"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VXP-E8-PA8">
-                                <rect key="frame" x="32" y="347.5" width="311" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <accessibility key="accessibilityConfiguration" identifier="PasswordTextField"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="8Z5-hq-dFG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="credentialsChanged:" destination="8qd-iW-5fg" eventType="editingChanged" id="Lc3-Nd-DrC"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeJ-D0-ol5">
                                 <rect key="frame" x="32" y="84" width="93.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -168,24 +164,16 @@ HATS Beanie App</string>
                         <color key="backgroundColor" red="0.95331488720000002" green="0.95331488720000002" blue="0.95331488720000002" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="SignInView"/>
                         <constraints>
-                            <constraint firstItem="VXP-E8-PA8" firstAttribute="trailing" secondItem="SGW-mB-J78" secondAttribute="trailing" id="4QR-x6-Q0p"/>
                             <constraint firstItem="oeJ-D0-ol5" firstAttribute="top" secondItem="Dm9-Bd-t2A" secondAttribute="bottom" constant="40" id="7QH-Rk-zJJ"/>
-                            <constraint firstItem="VXP-E8-PA8" firstAttribute="top" secondItem="SGW-mB-J78" secondAttribute="bottom" constant="18" id="7ph-Uu-pVC"/>
                             <constraint firstItem="uJs-A0-SPi" firstAttribute="top" secondItem="zbs-uB-Nr7" secondAttribute="bottom" constant="60" id="E2Z-Qq-CmY"/>
                             <constraint firstItem="zbs-uB-Nr7" firstAttribute="centerX" secondItem="NDI-Z9-Roh" secondAttribute="centerX" id="Gwa-0X-A3K"/>
-                            <constraint firstItem="VXP-E8-PA8" firstAttribute="leading" secondItem="SGW-mB-J78" secondAttribute="leading" id="Hge-vc-1aT"/>
-                            <constraint firstItem="SGW-mB-J78" firstAttribute="centerX" secondItem="NDI-Z9-Roh" secondAttribute="centerX" id="Q6H-0y-kDJ"/>
                             <constraint firstItem="oeJ-D0-ol5" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" constant="32" id="Whe-rl-a1q"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oeJ-D0-ol5" secondAttribute="trailing" constant="20" symbolic="YES" id="fmB-Xm-8C4"/>
-                            <constraint firstItem="SGW-mB-J78" firstAttribute="leading" secondItem="oeJ-D0-ol5" secondAttribute="leading" id="p5i-L3-O28"/>
-                            <constraint firstItem="SGW-mB-J78" firstAttribute="centerY" secondItem="NDI-Z9-Roh" secondAttribute="centerY" constant="-24" id="qrd-tZ-QOH"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="emailField" destination="SGW-mB-J78" id="Igq-cd-igL"/>
                         <outlet property="logIn" destination="zbs-uB-Nr7" id="FZU-bN-WOI"/>
-                        <outlet property="passwordField" destination="VXP-E8-PA8" id="l9a-Ym-8Mg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMa-tk-i2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,7 +193,7 @@ HATS Beanie App</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are signed in/up" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deB-Nf-PW5">
-                                <rect key="frame" x="32" y="72" width="299" height="38.5"/>
+                                <rect key="frame" x="32" y="72" width="277.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -215,7 +203,7 @@ HATS Beanie App</string>
                                 <color key="backgroundColor" red="0.69471571180555558" green="0.27205175823635525" blue="0.35792462901418848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="LogoutButton"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="3oh-JS-Frm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="3oh-JS-Frm"/>
                                     <constraint firstAttribute="height" constant="45" id="8xm-R0-ZOt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -245,7 +233,7 @@ HATS Beanie App</string>
                             <constraint firstItem="deB-Nf-PW5" firstAttribute="top" secondItem="b07-nt-cIs" secondAttribute="bottom" constant="72" id="WXh-be-LfA"/>
                             <constraint firstItem="gRs-YP-uAr" firstAttribute="top" secondItem="aMM-gP-X0k" secondAttribute="bottom" constant="52" id="anW-vP-uEH"/>
                             <constraint firstItem="aMM-gP-X0k" firstAttribute="centerX" secondItem="YnO-i4-MwY" secondAttribute="centerX" id="fmE-ac-Poo"/>
-                            <constraint firstAttribute="trailing" secondItem="deB-Nf-PW5" secondAttribute="trailing" constant="44" id="nuh-nK-gKC"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="deB-Nf-PW5" secondAttribute="trailing" constant="20" symbolic="YES" id="nuh-nK-gKC"/>
                             <constraint firstItem="sla-gz-amO" firstAttribute="centerX" secondItem="YnO-i4-MwY" secondAttribute="centerX" id="oiT-yw-cnD"/>
                         </constraints>
                     </view>
@@ -302,7 +290,7 @@ HATS Beanie App</string>
                                 <accessibility key="accessibilityConfiguration" identifier="SignUpButton"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="T0h-Xp-PGv"/>
-                                    <constraint firstAttribute="width" constant="201" id="T8Y-N8-u1a"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="T8Y-N8-u1a"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="SIGN UP">

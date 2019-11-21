@@ -11,35 +11,47 @@ import UIKit
 class FirstViewController: UIViewController {
   
   // MARK: - Outlets
-  @IBOutlet weak var signIn: UIButton!
+  @IBOutlet weak var logInButton: UIButton!
   @IBOutlet weak var signUp: UIButton!
   
   var viewModel: FirstViewModel!
+//  var signInViewModel: SignInViewModelWithCredentials!
 
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     viewModel.delegate = self
-    [signIn].forEach({ $0?.setRoundBorders(22) })
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     navigationController?.setNavigationBarHidden(true, animated: true)
   }
+  
+  
 
   // MARK: - Actions
   @IBAction func signInTapped() {
-    viewModel.signIn()
+    viewModel.login()
   }
 
   @IBAction func signUpTapped() {
     viewModel.signUp()
   }
+  
+  func setLoginButton(enabled: Bool) {
+    logInButton.alpha = enabled ? 1 : 0.5
+    logInButton.isEnabled = enabled
+  }
 }
 
 extension FirstViewController: FirstViewModelDelegate {
+  func didUpdateCredentials() {
+    setLoginButton(enabled: viewModel.hasValidCredentials)
+  }
+  
   func didUpdateState() {
     switch viewModel.state {
     case .loading:
