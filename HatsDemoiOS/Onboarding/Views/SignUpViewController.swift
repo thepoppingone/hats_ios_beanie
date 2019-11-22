@@ -16,7 +16,9 @@ class SignUpViewController: UIViewController {
   @IBOutlet weak var emailField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
   @IBOutlet weak var passwordConfirmationField: UITextField!
-  
+  @IBOutlet weak var registerLoadingView: UIView!
+  @IBOutlet weak var registerStatusLabel: UILabel!
+    
   var viewModel: SignUpViewModelWithEmail!
   
   // MARK: - Lifecycle Events
@@ -34,7 +36,10 @@ class SignUpViewController: UIViewController {
   }
   
   // MARK: - Actions
-  
+    @IBAction func cancelTouched(_ sender: Any) {
+        registerLoadingView.alpha = 0
+    }
+    
   @IBAction func formEditingChange(_ sender: UITextField) {
     let newValue = sender.text ?? ""
     switch sender {
@@ -50,11 +55,13 @@ class SignUpViewController: UIViewController {
   
   @IBAction func tapOnSignUpButton(_ sender: Any) {
     viewModel.signup()
+    registerStatusLabel.text = "Registering User..."
+    registerLoadingView.alpha = 0.9
   }
   
   func setSignUpButton(enabled: Bool) {
     signUp.alpha = enabled ? 1 : 0.5
-    signUp.isEnabled = enabled
+    signUp.isEnable = enabled
   }
 }
 
@@ -69,8 +76,10 @@ extension SignUpViewController: SignUpViewModelDelegate {
       UIApplication.showNetworkActivity()
     case .error(let errorDescription):
       UIApplication.hideNetworkActivity()
-      showMessage(title: "Error", message: errorDescription)
+//      showMessage(title: "Error", message: errorDescription)
+      registerStatusLabel.text = "Error: "+errorDescription
     case .idle:
+      registerLoadingView.alpha = 0.0
       UIApplication.hideNetworkActivity()
     }
   }

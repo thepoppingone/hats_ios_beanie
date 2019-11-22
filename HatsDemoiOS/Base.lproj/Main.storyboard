@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aXS-GV-C4h">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
@@ -12,7 +12,7 @@
             <objects>
                 <navigationController storyboardIdentifier="StartViewController" id="aXS-GV-C4h" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KuO-wr-86C">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -32,11 +32,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="EN8-2n-nei">
-                                <rect key="frame" x="12" y="604" width="351" height="45"/>
+                                <rect key="frame" x="16" y="799" width="382" height="45"/>
                                 <accessibility key="accessibilityConfiguration" identifier="GoToSignUpButton">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMy-eR-RsW">
-                                <rect key="frame" x="22" y="30" width="243" height="76.5"/>
+                                <rect key="frame" x="26" y="74" width="243" height="76.5"/>
                                 <string key="text">Welcome to 
 HATS Beanie App</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
@@ -58,7 +58,7 @@ HATS Beanie App</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-d3-xUd">
-                                <rect key="frame" x="32" y="283" width="311" height="40"/>
+                                <rect key="frame" x="36" y="283" width="342" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="EmailTextField"/>
                                 <constraints>
@@ -71,7 +71,7 @@ HATS Beanie App</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9P-I4-fUt">
-                                <rect key="frame" x="32" y="331" width="311" height="40"/>
+                                <rect key="frame" x="36" y="331" width="342" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="PasswordTextField"/>
                                 <constraints>
@@ -84,7 +84,7 @@ HATS Beanie App</string>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVq-bX-pA7">
-                                <rect key="frame" x="87" y="551" width="201" height="45"/>
+                                <rect key="frame" x="91" y="746" width="232" height="45"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="0.76094285102739723" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="GoToSignInButton"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -140,17 +140,17 @@ HATS Beanie App</string>
                         <viewControllerLayoutGuide type="bottom" id="gRs-YP-uAr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YnO-i4-MwY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are signed in/up" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deB-Nf-PW5">
-                                <rect key="frame" x="32" y="72" width="277.5" height="38.5"/>
+                                <rect key="frame" x="32" y="116" width="277.5" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMM-gP-X0k">
-                                <rect key="frame" x="87.5" y="570" width="200" height="45"/>
+                                <rect key="frame" x="107" y="765" width="200" height="45"/>
                                 <color key="backgroundColor" red="0.69471571180555558" green="0.27205175823635525" blue="0.35792462901418848" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="LogoutButton"/>
                                 <constraints>
@@ -166,7 +166,7 @@ HATS Beanie App</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sla-gz-amO">
-                                <rect key="frame" x="136.5" y="514" width="102" height="32"/>
+                                <rect key="frame" x="156" y="709" width="102" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Get my profile">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -175,12 +175,25 @@ HATS Beanie App</string>
                                     <action selector="tapOnGetMyProfile:" destination="K4y-mn-w4p" eventType="touchUpInside" id="HQj-iH-IxE"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFt-lP-SRV">
+                                <rect key="frame" x="69.5" y="339" width="275" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="GJj-9E-Pka"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="Tgk-ax-rko"/>
+                                </constraints>
+                                <state key="normal" title="Tap here to enter Beanie Store!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95331488720000002" green="0.95331488720000002" blue="0.95331488720000002" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="AfterLoginSignupView"/>
                         <constraints>
+                            <constraint firstItem="XFt-lP-SRV" firstAttribute="top" secondItem="deB-Nf-PW5" secondAttribute="bottom" constant="184.5" id="DBp-TL-fpH"/>
                             <constraint firstItem="deB-Nf-PW5" firstAttribute="leading" secondItem="YnO-i4-MwY" secondAttribute="leading" constant="32" id="FiE-id-ex3"/>
                             <constraint firstItem="aMM-gP-X0k" firstAttribute="top" secondItem="sla-gz-amO" secondAttribute="bottom" constant="24" id="Nt1-9I-wPr"/>
+                            <constraint firstItem="XFt-lP-SRV" firstAttribute="centerX" secondItem="YnO-i4-MwY" secondAttribute="centerX" id="OZx-jD-Uf4"/>
                             <constraint firstItem="deB-Nf-PW5" firstAttribute="top" secondItem="b07-nt-cIs" secondAttribute="bottom" constant="72" id="WXh-be-LfA"/>
                             <constraint firstItem="gRs-YP-uAr" firstAttribute="top" secondItem="aMM-gP-X0k" secondAttribute="bottom" constant="52" id="anW-vP-uEH"/>
                             <constraint firstItem="aMM-gP-X0k" firstAttribute="centerX" secondItem="YnO-i4-MwY" secondAttribute="centerX" id="fmE-ac-Poo"/>
@@ -195,7 +208,7 @@ HATS Beanie App</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCL-Vt-8BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1944.8" y="428.63568215892059"/>
+            <point key="canvasLocation" x="1197.5999999999999" y="428.63568215892059"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="D1s-zu-Y9Z">
@@ -206,11 +219,11 @@ HATS Beanie App</string>
                         <viewControllerLayoutGuide type="bottom" id="sxg-nY-nv5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fOd-E6-qfR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GqP-oe-fcZ">
-                                <rect key="frame" x="32" y="313.5" width="311" height="40"/>
+                                <rect key="frame" x="32" y="428" width="350" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="PasswordTextField"/>
                                 <constraints>
@@ -223,7 +236,7 @@ HATS Beanie App</string>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v9r-co-4vM">
-                                <rect key="frame" x="32" y="373.5" width="311" height="40"/>
+                                <rect key="frame" x="32" y="488" width="350" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="ConfirmPasswordTextField"/>
                                 <constraints>
@@ -236,7 +249,7 @@ HATS Beanie App</string>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRD-MA-2oV">
-                                <rect key="frame" x="87" y="570" width="201" height="45"/>
+                                <rect key="frame" x="106.5" y="765" width="201" height="45"/>
                                 <color key="backgroundColor" red="0.1831054688" green="0.1831054688" blue="0.1831054688" alpha="0.76094285100000003" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="SignUpButton"/>
                                 <constraints>
@@ -252,13 +265,13 @@ HATS Beanie App</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaK-dC-F7z">
-                                <rect key="frame" x="32" y="84" width="109" height="38.5"/>
+                                <rect key="frame" x="32" y="128" width="109" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="0.45508993310000001" green="0.41961441859999998" blue="0.40671423159999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xYV-eE-Ila">
-                                <rect key="frame" x="32" y="253.5" width="311" height="40"/>
+                                <rect key="frame" x="32" y="368" width="350" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <accessibility key="accessibilityConfiguration" identifier="EmailTextField"/>
                                 <constraints>
@@ -270,6 +283,41 @@ HATS Beanie App</string>
                                     <action selector="formEditingChange:" destination="1Oa-ww-vdW" eventType="editingChanged" id="v4I-9n-a3M"/>
                                 </connections>
                             </textField>
+                            <view opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nv-Jc-o5M">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808.5"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-YX-rCK">
+                                        <rect key="frame" x="188.5" y="241" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Text Here " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iex-Pv-6TN">
+                                        <rect key="frame" x="141.5" y="300" width="131.5" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="Wvp-kp-IbZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THq-Ik-Hrm">
+                                        <rect key="frame" x="183" y="455.5" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelTouched:" destination="1Oa-ww-vdW" eventType="touchUpInside" id="aRh-NE-EDi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="g0t-YX-rCK" firstAttribute="centerX" secondItem="5nv-Jc-o5M" secondAttribute="centerX" id="1tO-ti-egw"/>
+                                    <constraint firstItem="iex-Pv-6TN" firstAttribute="centerX" secondItem="g0t-YX-rCK" secondAttribute="centerX" id="7A7-Up-HJ2"/>
+                                    <constraint firstItem="g0t-YX-rCK" firstAttribute="top" secondItem="5nv-Jc-o5M" secondAttribute="top" constant="241" id="VT0-wg-ajP"/>
+                                    <constraint firstItem="THq-Ik-Hrm" firstAttribute="centerX" secondItem="iex-Pv-6TN" secondAttribute="centerX" id="bAs-Sg-DvK"/>
+                                    <constraint firstItem="iex-Pv-6TN" firstAttribute="top" secondItem="g0t-YX-rCK" secondAttribute="bottom" constant="22" id="jxV-Lj-8WN"/>
+                                    <constraint firstItem="THq-Ik-Hrm" firstAttribute="top" secondItem="iex-Pv-6TN" secondAttribute="bottom" constant="135" id="oks-Zs-qZg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.95331488720000002" green="0.95331488720000002" blue="0.95331488720000002" alpha="1" colorSpace="calibratedRGB"/>
                         <accessibility key="accessibilityConfiguration" identifier="SignUpView"/>
@@ -278,13 +326,18 @@ HATS Beanie App</string>
                             <constraint firstItem="oRD-MA-2oV" firstAttribute="centerX" secondItem="fOd-E6-qfR" secondAttribute="centerX" id="BXO-AZ-jhA"/>
                             <constraint firstItem="GqP-oe-fcZ" firstAttribute="trailing" secondItem="v9r-co-4vM" secondAttribute="trailing" id="Ef9-2I-7N3"/>
                             <constraint firstItem="xYV-eE-Ila" firstAttribute="centerX" secondItem="fOd-E6-qfR" secondAttribute="centerX" id="FBM-sf-qIy"/>
+                            <constraint firstItem="5nv-Jc-o5M" firstAttribute="leading" secondItem="fOd-E6-qfR" secondAttribute="leading" id="IY0-50-AM1"/>
                             <constraint firstItem="xYV-eE-Ila" firstAttribute="leading" secondItem="v9r-co-4vM" secondAttribute="leading" id="JJl-1J-wG4"/>
                             <constraint firstItem="v9r-co-4vM" firstAttribute="centerX" secondItem="fOd-E6-qfR" secondAttribute="centerX" id="JmO-QH-1tz"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AaK-dC-F7z" secondAttribute="trailing" constant="20" symbolic="YES" id="Nsg-Hg-edk"/>
                             <constraint firstItem="v9r-co-4vM" firstAttribute="top" secondItem="GqP-oe-fcZ" secondAttribute="bottom" constant="20" id="PZU-Dc-210"/>
                             <constraint firstItem="xYV-eE-Ila" firstAttribute="leading" secondItem="AaK-dC-F7z" secondAttribute="leading" id="V47-Fw-I1F"/>
+                            <constraint firstItem="5nv-Jc-o5M" firstAttribute="height" secondItem="fOd-E6-qfR" secondAttribute="height" multiplier="0.902549" id="Yqe-8g-aL5"/>
                             <constraint firstItem="sxg-nY-nv5" firstAttribute="top" secondItem="oRD-MA-2oV" secondAttribute="bottom" constant="52" id="cxX-W2-qmP"/>
                             <constraint firstItem="AaK-dC-F7z" firstAttribute="top" secondItem="XMA-3Z-CBb" secondAttribute="bottom" constant="40" id="e0E-z4-fZT"/>
                             <constraint firstItem="AaK-dC-F7z" firstAttribute="leading" secondItem="fOd-E6-qfR" secondAttribute="leading" constant="32" id="fHa-wy-K7W"/>
+                            <constraint firstItem="5nv-Jc-o5M" firstAttribute="width" secondItem="fOd-E6-qfR" secondAttribute="width" id="jGq-bO-ZPy"/>
+                            <constraint firstItem="5nv-Jc-o5M" firstAttribute="top" secondItem="XMA-3Z-CBb" secondAttribute="bottom" id="l4v-fH-C5L"/>
                             <constraint firstItem="GqP-oe-fcZ" firstAttribute="centerY" secondItem="fOd-E6-qfR" secondAttribute="centerY" id="osu-ZF-pyl"/>
                             <constraint firstItem="GqP-oe-fcZ" firstAttribute="centerX" secondItem="fOd-E6-qfR" secondAttribute="centerX" id="qSE-qI-Yy8"/>
                             <constraint firstItem="xYV-eE-Ila" firstAttribute="trailing" secondItem="v9r-co-4vM" secondAttribute="trailing" id="r8T-p2-CEN"/>
@@ -296,12 +349,14 @@ HATS Beanie App</string>
                         <outlet property="emailField" destination="xYV-eE-Ila" id="eJu-Ky-1eT"/>
                         <outlet property="passwordConfirmationField" destination="v9r-co-4vM" id="u15-GJ-ejU"/>
                         <outlet property="passwordField" destination="GqP-oe-fcZ" id="U48-eO-YFg"/>
+                        <outlet property="registerLoadingView" destination="5nv-Jc-o5M" id="f1V-MU-1J4"/>
+                        <outlet property="registerStatusLabel" destination="iex-Pv-6TN" id="jvb-kT-Eac"/>
                         <outlet property="signUp" destination="oRD-MA-2oV" id="FVU-88-BaX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWL-0F-Lip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949.60000000000002" y="1178.8605697151424"/>
+            <point key="canvasLocation" x="381.60000000000002" y="1170.7646176911546"/>
         </scene>
     </scenes>
 </document>
