@@ -59,7 +59,7 @@ HATS Beanie App</string>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-d3-xUd">
                                 <rect key="frame" x="32" y="283" width="311" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="EmailTextField"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="d0z-wb-Tus"/>
@@ -130,57 +130,6 @@ HATS Beanie App</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="381.60000000000002" y="428.63568215892059"/>
-        </scene>
-        <!--Sign In View Controller-->
-        <scene sceneID="ZQL-UK-H2d">
-            <objects>
-                <viewController storyboardIdentifier="SignInViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8qd-iW-5fg" customClass="SignInViewController" customModule="HatsDemoiOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dm9-Bd-t2A"/>
-                        <viewControllerLayoutGuide type="bottom" id="uJs-A0-SPi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NDI-Z9-Roh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbs-uB-Nr7">
-                                <rect key="frame" x="87" y="562" width="201" height="45"/>
-                                <color key="backgroundColor" red="0.1831054688" green="0.1831054688" blue="0.1831054688" alpha="0.76094285100000003" colorSpace="calibratedRGB"/>
-                                <accessibility key="accessibilityConfiguration" identifier="SignInButton"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="9up-t4-2oL"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="LOr-Hn-SLJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                <state key="normal" title="LOG IN">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeJ-D0-ol5">
-                                <rect key="frame" x="32" y="84" width="93.5" height="38.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <color key="textColor" red="0.45508993310000001" green="0.41961441859999998" blue="0.40671423159999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.95331488720000002" green="0.95331488720000002" blue="0.95331488720000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <accessibility key="accessibilityConfiguration" identifier="SignInView"/>
-                        <constraints>
-                            <constraint firstItem="oeJ-D0-ol5" firstAttribute="top" secondItem="Dm9-Bd-t2A" secondAttribute="bottom" constant="40" id="7QH-Rk-zJJ"/>
-                            <constraint firstItem="uJs-A0-SPi" firstAttribute="top" secondItem="zbs-uB-Nr7" secondAttribute="bottom" constant="60" id="E2Z-Qq-CmY"/>
-                            <constraint firstItem="zbs-uB-Nr7" firstAttribute="centerX" secondItem="NDI-Z9-Roh" secondAttribute="centerX" id="Gwa-0X-A3K"/>
-                            <constraint firstItem="oeJ-D0-ol5" firstAttribute="leading" secondItem="NDI-Z9-Roh" secondAttribute="leading" constant="32" id="Whe-rl-a1q"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oeJ-D0-ol5" secondAttribute="trailing" constant="20" symbolic="YES" id="fmB-Xm-8C4"/>
-                        </constraints>
-                    </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="logIn" destination="zbs-uB-Nr7" id="FZU-bN-WOI"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMa-tk-i2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1157.5999999999999" y="428.63568215892059"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="qZP-Pf-s6w">
