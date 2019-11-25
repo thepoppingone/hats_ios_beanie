@@ -61,7 +61,7 @@ class SignUpViewController: UIViewController {
   
   func setSignUpButton(enabled: Bool) {
     signUp.alpha = enabled ? 1 : 0.5
-    signUp.isEnable = enabled
+    signUp.isEnabled = enabled
   }
 }
 

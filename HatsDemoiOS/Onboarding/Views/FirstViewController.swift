@@ -15,10 +15,16 @@ class FirstViewController: UIViewController {
   @IBOutlet weak var signUp: UIButton!
   @IBOutlet weak var emailField: UITextField!
   @IBOutlet weak var passwordField: UITextField!
+  @IBOutlet weak var signInLoadingView: UIView!
+  @IBOutlet weak var signInStatusText: UILabel!
   
   var viewModel: FirstViewModel!
 //  var signInViewModel: SignInViewModelWithCredentials!
 
+  
+  @IBAction func cancelTouched(_ sender: Any) {
+    signInLoadingView.alpha = 0
+  }
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
@@ -45,6 +51,8 @@ class FirstViewController: UIViewController {
   }
   
   @IBAction func signInTapped() {
+    signInStatusText.text = "Logging in "+viewModel.email+" ..."
+    signInLoadingView.alpha = 0.9
     viewModel.login()
   }
 
@@ -69,9 +77,11 @@ extension FirstViewController: FirstViewModelDelegate {
       UIApplication.showNetworkActivity()
     case .idle:
       UIApplication.hideNetworkActivity()
+      signInLoadingView.alpha = 0.0
     case .error(let errorDescription):
       UIApplication.hideNetworkActivity()
-      showMessage(title: "Oops", message: errorDescription)
+//      showMessage(title: "Oops", message: errorDescription)
+      signInStatusText.text = "Error: "+errorDescription
     }
   }
 }
