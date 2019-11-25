@@ -228,6 +228,9 @@ HATS Beanie App</string>
                                 <state key="normal" title="Tap here to enter Beanie Store!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NeV-5K-R6b" kind="show" id="a7I-LL-gTK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95331488720000002" green="0.95331488720000002" blue="0.95331488720000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -252,6 +255,16 @@ HATS Beanie App</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCL-Vt-8BE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1197.5999999999999" y="428.63568215892059"/>
+        </scene>
+        <!--BeanieHome-->
+        <scene sceneID="Lxt-R9-Z8v">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BeanieHome" referencedIdentifier="BeanieHome" id="NeV-5K-R6b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IJI-Gy-UuA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwD-cV-diU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1841" y="393"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="D1s-zu-Y9Z">

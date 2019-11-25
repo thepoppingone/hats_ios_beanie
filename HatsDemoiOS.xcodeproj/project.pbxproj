@@ -13,6 +13,8 @@
 		0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ABFB8921FA366D90098F751 /* Main.storyboard */; };
 		49D136B4E096C5505472875D /* Pods_AcceptanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088356ECD2C73295638B6467 /* Pods_AcceptanceTests.framework */; };
 		873C60822383C554008A033F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 873C60812383C554008A033F /* Fonts */; };
+		879BEBA3238BB2AE0052E672 /* BeanieDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEBA2238BB2AE0052E672 /* BeanieDevice.swift */; };
+		879BEBA8238BC9FD0052E672 /* BeanieHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879BEBA7238BC9FD0052E672 /* BeanieHome.storyboard */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B12AF6B1F269B03005FD465 /* ThirdPartyKeys.example.plist */; };
@@ -92,6 +94,8 @@
 		67DFD90C3191FAE799DDD1EE /* Pods-AcceptanceTests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.staging.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.staging.xcconfig"; sourceTree = "<group>"; };
 		803CBE81A7260128DDF0ED4B /* Pods-HatsDemoiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatsDemoiOS.release.xcconfig"; path = "Target Support Files/Pods-HatsDemoiOS/Pods-HatsDemoiOS.release.xcconfig"; sourceTree = "<group>"; };
 		873C60812383C554008A033F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		879BEBA2238BB2AE0052E672 /* BeanieDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanieDevice.swift; sourceTree = "<group>"; };
+		879BEBA7238BC9FD0052E672 /* BeanieHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeanieHome.storyboard; sourceTree = "<group>"; };
 		8D05D9003126A2B7DEFC4F88 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AFCC9A00A8ECAFD666D31D3 /* Pods-HatsDemoiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatsDemoiOS.debug.xcconfig"; path = "Target Support Files/Pods-HatsDemoiOS/Pods-HatsDemoiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -289,9 +293,18 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		879BEBA4238BC9C00052E672 /* Beanie */ = {
+			isa = PBXGroup;
+			children = (
+				879BEBA7238BC9FD0052E672 /* BeanieHome.storyboard */,
+			);
+			path = Beanie;
+			sourceTree = "<group>";
+		};
 		9B0C72511C738C3100BAF3B1 /* HatsDemoiOS */ = {
 			isa = PBXGroup;
 			children = (
+				879BEBA4238BC9C00052E672 /* Beanie */,
 				873C60812383C554008A033F /* Fonts */,
 				078642F222E6691B0027BF11 /* Common */,
 				078642EB22E668520027BF11 /* Home */,
@@ -462,6 +475,7 @@
 				FE4D636322B2CDF700685161 /* ViewModelState.swift */,
 				E8FBB1BE1DD21A32000D6740 /* Session.swift */,
 				9B77E0721E2FB6350020E450 /* User.swift */,
+				879BEBA2238BB2AE0052E672 /* BeanieDevice.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -630,6 +644,7 @@
 				0ABFB8901FA366D90098F751 /* Main.storyboard in Resources */,
 				9BFA84F31C776827009F64E4 /* LaunchScreen.storyboard in Resources */,
 				9B8D306B20AB456C0050697F /* Localization.strings in Resources */,
+				879BEBA8238BC9FD0052E672 /* BeanieHome.storyboard in Resources */,
 				9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */,
 				873C60822383C554008A033F /* Fonts in Resources */,
 				9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */,
@@ -772,7 +787,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -853,6 +868,7 @@
 				FE251D0722A7FE0F00E0DE90 /* DataExtension.swift in Sources */,
 				FE583F1022AFC9FA00EF3CDA /* AnalyticsEvent.swift in Sources */,
 				FE4D635E22B2CAFF00685161 /* AppNavigator.swift in Sources */,
+				879BEBA3238BB2AE0052E672 /* BeanieDevice.swift in Sources */,
 				E8FBB1C11DD21D18000D6740 /* SessionManager.swift in Sources */,
 				9BE3669F1F10175E007CAECD /* Base64Media.swift in Sources */,
 				9BAFB7C32114E3CD0099DC61 /* SignInViewModel.swift in Sources */,
