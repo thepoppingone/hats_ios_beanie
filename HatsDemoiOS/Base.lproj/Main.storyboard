@@ -229,7 +229,7 @@ HATS Beanie App</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NeV-5K-R6b" kind="show" id="a7I-LL-gTK"/>
+                                    <segue destination="NeV-5K-R6b" kind="show" id="Vre-Ly-XRE"/>
                                 </connections>
                             </button>
                         </subviews>

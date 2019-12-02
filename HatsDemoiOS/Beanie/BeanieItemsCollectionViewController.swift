@@ -30,6 +30,9 @@ class BeanieItemsCollectionViewController: UIViewController, UICollectionViewDat
         sampleData.append(device1);
         sampleData.append(device2);
         super.viewDidLoad()
+//        self.navigationController.navigationBar.hidden = false;
+
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -70,8 +73,6 @@ class BeanieItemsCollectionViewController: UIViewController, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCell", for: indexPath) as! DeviceCollectionViewCell
     
         let device = sampleData[indexPath.row] as BeanieDevice
-        print(device)
-        
         cell.deviceId.text = String(device.id)
         cell.deviceName.text = device.name
         cell.deviceBrand.text = device.brand
