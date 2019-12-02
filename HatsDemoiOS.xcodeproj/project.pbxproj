@@ -15,6 +15,8 @@
 		873C60822383C554008A033F /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 873C60812383C554008A033F /* Fonts */; };
 		879BEBA3238BB2AE0052E672 /* BeanieDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEBA2238BB2AE0052E672 /* BeanieDevice.swift */; };
 		879BEBA8238BC9FD0052E672 /* BeanieHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879BEBA7238BC9FD0052E672 /* BeanieHome.storyboard */; };
+		879BEBAC238FC7450052E672 /* BeanieItemsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEBAB238FC7450052E672 /* BeanieItemsCollectionViewController.swift */; };
+		879BEBB22394F4F80052E672 /* DeviceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879BEBB12394F4F80052E672 /* DeviceCollectionViewCell.swift */; };
 		9B0C72711C738D3400BAF3B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */; };
 		9B0C72721C738D3400BAF3B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B0C726A1C738D3400BAF3B1 /* Assets.xcassets */; };
 		9B12AF6C1F269B03005FD465 /* ThirdPartyKeys.example.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B12AF6B1F269B03005FD465 /* ThirdPartyKeys.example.plist */; };
@@ -96,6 +98,8 @@
 		873C60812383C554008A033F /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		879BEBA2238BB2AE0052E672 /* BeanieDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanieDevice.swift; sourceTree = "<group>"; };
 		879BEBA7238BC9FD0052E672 /* BeanieHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BeanieHome.storyboard; sourceTree = "<group>"; };
+		879BEBAB238FC7450052E672 /* BeanieItemsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanieItemsCollectionViewController.swift; sourceTree = "<group>"; };
+		879BEBB12394F4F80052E672 /* DeviceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCollectionViewCell.swift; sourceTree = "<group>"; };
 		8D05D9003126A2B7DEFC4F88 /* Pods-AcceptanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcceptanceTests.debug.xcconfig"; path = "Target Support Files/Pods-AcceptanceTests/Pods-AcceptanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9AFCC9A00A8ECAFD666D31D3 /* Pods-HatsDemoiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatsDemoiOS.debug.xcconfig"; path = "Target Support Files/Pods-HatsDemoiOS/Pods-HatsDemoiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9B0C72691C738D3400BAF3B1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -297,6 +301,8 @@
 			isa = PBXGroup;
 			children = (
 				879BEBA7238BC9FD0052E672 /* BeanieHome.storyboard */,
+				879BEBAB238FC7450052E672 /* BeanieItemsCollectionViewController.swift */,
+				879BEBB12394F4F80052E672 /* DeviceCollectionViewCell.swift */,
 			);
 			path = Beanie;
 			sourceTree = "<group>";
@@ -831,6 +837,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879BEBAC238FC7450052E672 /* BeanieItemsCollectionViewController.swift in Sources */,
 				E8290BFE1D832D9200599960 /* UIViewExtension.swift in Sources */,
 				07741D72218CDED600DB3B97 /* FirstViewModel.swift in Sources */,
 				FE583F0C22AFC9EA00EF3CDA /* AnalyticsService.swift in Sources */,
@@ -848,6 +855,7 @@
 				E81171921DE5EFB7003D3DF5 /* UIViewControllerExtension.swift in Sources */,
 				9B3AA3991ED35007005A4D26 /* SignInViewController.swift in Sources */,
 				E8FBB1BF1DD21A32000D6740 /* Session.swift in Sources */,
+				879BEBB22394F4F80052E672 /* DeviceCollectionViewCell.swift in Sources */,
 				0A6990351F9F82A300F4BAC7 /* UIApplicationExtension.swift in Sources */,
 				9B77E0731E2FB6350020E450 /* User.swift in Sources */,
 				FA54D5881E11C59600F0DBEA /* FirstViewController.swift in Sources */,
