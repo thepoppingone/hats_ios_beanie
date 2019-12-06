@@ -10,26 +10,22 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
+extension Notification.Name {
+     static let reload = Notification.Name("reload")
+}
+
 class BeanieItemsCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    let device1 = BeanieDevice(id: 1, name: "Ric's iPhone", brand: "Apple", model: "iPhone 7 Plus", operating_system: "iOS", user_group: "HATS", purchase_date: Date())
-    let device2 = BeanieDevice(id: 2, name: "Ric's Pixel", brand: "Google", model: "Pixel 3a", operating_system: "Android", user_group: "HATS", purchase_date: Date())
-    let device3 = BeanieDevice(id: 3, name: "Ric's Galaxy", brand: "Samsung", model: "Galaxy S10e", operating_system: "Android", user_group: "HATS", purchase_date: Date())
-    let device4 = BeanieDevice(id: 4, name: "Ric's Mate 30", brand: "Huawei", model: "Mate 30 Pro", operating_system: "Android", user_group: "HATS", purchase_date: Date())
-    let device5 = BeanieDevice(id: 5, name: "Ric's A2", brand: "Xiaomi", model: "A2", operating_system: "Android", user_group: "HATS", purchase_date: Date())
-    
-    var sampleData: [BeanieDevice] = [];
     @IBOutlet weak var deviceCollectionView: UICollectionView!
-    
-    override func viewDidLoad() {
-        sampleData.append(device1);
-        sampleData.append(device2);
-        sampleData.append(device3);
-        sampleData.append(device4);
-        sampleData.append(device5);
-        super.viewDidLoad()
-//        self.navigationController.navigationBar.hidden = false;
 
+    override func viewDidLoad() {
+        
+        BeanieStore.shared.currentVC = self
+
+        NotificationCenter.default.addObserver(self, selector: #selector(notifyReloadData(notification:)), name: .reload, object: nil)
+        super.viewDidLoad()
+        
+        // Set Bar to be shown
         self.navigationController?.setNavigationBarHidden(false, animated: true)
 
         // Uncomment the following line to preserve selection between presentations
@@ -38,9 +34,7 @@ class BeanieItemsCollectionViewController: UIViewController, UICollectionViewDat
         // Register cell classes
         deviceCollectionView.delegate = self
         deviceCollectionView.dataSource = self
-//        deviceCollectionView.register(DeviceCollectionViewCell.self, forCellWithReuseIdentifier: "deviceCell")
 
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -52,6 +46,11 @@ class BeanieItemsCollectionViewController: UIViewController, UICollectionViewDat
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @objc func notifyReloadData(notification: NSNotification){
+        deviceCollectionView.reloadData()
+        deviceCollectionView.layoutSubviews()
+    }
 
     // MARK: UICollectionViewDataSource
 
@@ -63,20 +62,28 @@ class BeanieItemsCollectionViewController: UIViewController, UICollectionViewDat
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return sampleData.count
+        let activeItems = BeanieStore.shared.storeItems.filter { (BeanieDevice) -> Bool in
+            BeanieDevice.isDeleted == false
+        }
+        
+        return activeItems.count
 //        return 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "deviceCell", for: indexPath) as! DeviceCollectionViewCell
     
-        let device = sampleData[indexPath.row] as BeanieDevice
+        let activeItems = BeanieStore.shared.storeItems.filter { (BeanieDevice) -> Bool in
+            BeanieDevice.isDeleted == false
+        }
+        
+        let device = activeItems[indexPath.row] as BeanieDevice
         cell.deviceId.text = String(device.id)
         cell.deviceName.text = device.name
         cell.deviceBrand.text = device.brand
         
         // Configure the cell
-     
+        
         return cell
     }
     

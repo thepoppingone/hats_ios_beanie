@@ -34,16 +34,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="369" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-8g-Ec5">
-                                                    <rect key="frame" x="310" y="23" width="19" height="20.5"/>
-                                                    <state key="normal" backgroundImage="trash" catalog="system"/>
-                                                </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdn-PZ-EKm">
-                                                    <rect key="frame" x="280" y="25.5" width="21" height="18"/>
+                                                    <rect key="frame" x="268" y="20.5" width="36" height="30.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="Fdn-PZ-EKm" secondAttribute="height" multiplier="25:27" id="5db-Yv-KXW"/>
+                                                        <constraint firstAttribute="height" constant="35" id="DZk-eI-HFp"/>
+                                                        <constraint firstAttribute="width" constant="36" id="jga-nW-ZdO"/>
                                                     </constraints>
                                                     <state key="normal" backgroundImage="pencil" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="editTouched:" destination="Zfv-26-5a9" eventType="touchUpInside" id="eIx-m4-kho"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFT-fO-V8X">
                                                     <rect key="frame" x="8" y="23.5" width="31" height="21"/>
@@ -58,22 +58,33 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wz-75-Qqz">
-                                                    <rect key="frame" x="196" y="23.5" width="46" height="21"/>
+                                                    <rect key="frame" x="207" y="23.5" width="46" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-8g-Ec5">
+                                                    <rect key="frame" x="312" y="19" width="32" height="33.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="1ic-4g-ZrO"/>
+                                                        <constraint firstAttribute="height" constant="33" id="rnv-2S-3Xk"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="trash" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="deleteTouched:" destination="Zfv-26-5a9" eventType="touchUpInside" id="rMa-Dk-ArX"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Fdn-PZ-EKm" firstAttribute="leading" secondItem="4wz-75-Qqz" secondAttribute="trailing" constant="38" id="1PD-Pl-k3Z"/>
+                                                <constraint firstItem="Fdn-PZ-EKm" firstAttribute="leading" secondItem="4wz-75-Qqz" secondAttribute="trailing" constant="15" id="1PD-Pl-k3Z"/>
                                                 <constraint firstItem="4wz-75-Qqz" firstAttribute="centerY" secondItem="OgZ-LX-iwv" secondAttribute="centerY" id="BD3-Up-tJN"/>
-                                                <constraint firstItem="XXh-8g-Ec5" firstAttribute="leading" secondItem="Fdn-PZ-EKm" secondAttribute="trailing" constant="9" id="Eoq-Zj-Smt"/>
+                                                <constraint firstItem="XXh-8g-Ec5" firstAttribute="leading" secondItem="Fdn-PZ-EKm" secondAttribute="trailing" constant="8" id="Eoq-Zj-Smt"/>
                                                 <constraint firstItem="ZBa-P1-TuR" firstAttribute="centerY" secondItem="tFT-fO-V8X" secondAttribute="centerY" id="UVl-jW-uYI"/>
                                                 <constraint firstItem="tFT-fO-V8X" firstAttribute="centerY" secondItem="OgZ-LX-iwv" secondAttribute="centerY" id="ap6-W6-3MX"/>
-                                                <constraint firstItem="Fdn-PZ-EKm" firstAttribute="centerY" secondItem="XXh-8g-Ec5" secondAttribute="centerY" id="hvm-tK-HDK"/>
-                                                <constraint firstAttribute="trailing" secondItem="XXh-8g-Ec5" secondAttribute="trailing" constant="40" id="kTX-gK-wVY"/>
+                                                <constraint firstItem="Fdn-PZ-EKm" firstAttribute="centerY" secondItem="XXh-8g-Ec5" secondAttribute="centerY" constant="-1" id="hvm-tK-HDK"/>
+                                                <constraint firstAttribute="trailing" secondItem="XXh-8g-Ec5" secondAttribute="trailing" constant="25" id="kTX-gK-wVY"/>
                                                 <constraint firstItem="ZBa-P1-TuR" firstAttribute="leading" secondItem="tFT-fO-V8X" secondAttribute="trailing" constant="8" id="l3g-mq-GME"/>
-                                                <constraint firstItem="XXh-8g-Ec5" firstAttribute="centerY" secondItem="OgZ-LX-iwv" secondAttribute="centerY" id="m0M-ow-Wan"/>
+                                                <constraint firstItem="XXh-8g-Ec5" firstAttribute="centerY" secondItem="OgZ-LX-iwv" secondAttribute="centerY" constant="2.25" id="m0M-ow-Wan"/>
                                                 <constraint firstItem="tFT-fO-V8X" firstAttribute="leading" secondItem="OgZ-LX-iwv" secondAttribute="leading" constant="8" id="s1I-N2-8ju"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -108,7 +119,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Y2y-fB-aSS" kind="show" id="ZVe-3c-NlU"/>
+                                    <segue destination="Y2y-fB-aSS" kind="show" identifier="addNewDeviceSegue" id="ZVe-3c-NlU"/>
                                 </connections>
                             </button>
                         </subviews>

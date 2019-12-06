@@ -22,4 +22,24 @@ class DeviceCollectionViewCell: UICollectionViewCell {
          contentView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
      }
     
+    @IBAction func deleteTouched(_ sender: Any) {
+        
+        var deleteAlert = UIAlertController(title: "Delete this device", message: "Are You Sure to Delete? ", preferredStyle: UIAlertController.Style.alert)
+
+        deleteAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+//            BeanieStore.shared.currentVC.navigationController?.popToRootViewController(animated: true)
+            BeanieStore.shared.removeDevice(deviceId: Int(self.deviceId.text!)!)
+        }))
+//
+        deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+            deleteAlert.dismiss(animated: true, completion: nil)
+        }))
+        
+        BeanieStore.shared.currentVC.present(deleteAlert, animated: true, completion: nil)
+        
+    }
+    
+    @IBAction func editTouched(_ sender: Any) {
+    }
+    
 }

@@ -9,8 +9,7 @@
 import UIKit
 
 class BeanieNewDeviceViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
-
-
+    
     @IBOutlet weak var brandPickerView: UIPickerView!
     @IBOutlet weak var osPickerView: UIPickerView!
     @IBOutlet weak var hatsUserGroupSwitch: UISwitch!
@@ -30,7 +29,7 @@ class BeanieNewDeviceViewController: UIViewController, UIPickerViewDelegate, UIP
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.nameTextField.delegate = self
         self.modelTextField.delegate = self
         self.brandPickerView.delegate = self
@@ -105,21 +104,32 @@ class BeanieNewDeviceViewController: UIViewController, UIPickerViewDelegate, UIP
             addDeviceBtn.backgroundColor = UIColor.gray
         }
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     @IBAction func addDeviceTapped(_ sender: Any) {
         
-        let newDevice = BeanieDevice(id: Int.random(in: 10..<100), name: inputName, brand: selectedBrand, model: inputModel, operating_system: selectedOS, user_group: hatsUserGroupSwitch.isOn ? "HATS" : "None" , purchase_date: deviceDatePicker.date)
+        let newDevice = BeanieDevice(id: BeanieStore.shared.storeItems.count + 1, name: inputName, brand: selectedBrand, model: inputModel, operating_system: selectedOS, user_group: hatsUserGroupSwitch.isOn ? "HATS" : "None" , purchase_date: deviceDatePicker.date)
         
+        BeanieStore.shared.addNewDevice(device: newDevice)
+        if let stack = self.navigationController?.viewControllers {
+            if (stack.count > 1) {
+                let previousController = stack[stack.count-2] as! BeanieItemsCollectionViewController
+                previousController.deviceCollectionView.reloadData()
+                //            if let previosController == Beanie
+                
+            }
+        }
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
 }
