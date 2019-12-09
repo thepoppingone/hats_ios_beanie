@@ -40,6 +40,11 @@ class DeviceCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func editTouched(_ sender: Any) {
+        let deviceIDEditing = Int(self.deviceId.text!)
+        if let editDeviceVC = UIStoryboard(name: "BeanieHome", bundle: nil).instantiateViewController(withIdentifier: "editDeviceVC") as? BeanieEditDeviceViewController {
+            editDeviceVC.deviceId = deviceIDEditing!
+            BeanieStore.shared.currentVC.present(editDeviceVC, animated: true)
+        }
     }
     
 }

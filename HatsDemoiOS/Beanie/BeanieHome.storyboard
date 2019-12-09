@@ -316,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="44" y="524.8875562218891"/>
         </scene>
-        <!--Beanie Edit Device View Controller-->
+        <!--editDeviceVC-->
         <scene sceneID="4ij-q9-WKV">
             <objects>
-                <viewController id="s6O-ai-WBw" customClass="BeanieEditDeviceViewController" customModule="HatsDemoiOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="editDeviceVC" title="editDeviceVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s6O-ai-WBw" customClass="BeanieEditDeviceViewController" customModule="HatsDemoiOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z8b-oh-lmP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,7 +401,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="addDeviceTapped:" destination="s6O-ai-WBw" eventType="touchUpInside" id="9Z9-kZ-PBV"/>
                                     <action selector="editDeviceTapped:" destination="s6O-ai-WBw" eventType="touchUpInside" id="BMl-Ji-km6"/>
                                 </connections>
                             </button>
@@ -453,7 +452,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="V7d-Zo-eNW"/>
                     <connections>
-                        <outlet property="addDeviceBtn" destination="vQG-q9-2Ic" id="LyA-Xt-tPf"/>
                         <outlet property="brandPickerView" destination="eIY-Ja-Bku" id="NJf-SG-PdH"/>
                         <outlet property="deviceDatePicker" destination="2Bv-Hj-t8y" id="NKQ-qi-1me"/>
                         <outlet property="editDeviceButton" destination="vQG-q9-2Ic" id="49z-Do-y8k"/>

@@ -17,7 +17,8 @@ class BeanieEditDeviceViewController: UIViewController, UIPickerViewDelegate, UI
     @IBOutlet weak var editDeviceButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var modelTextField: UITextField!
-    
+
+    var deviceId: Int = 0
     var brandPickerData: [String] = [String]()
     var osPickerData: [String] = [String]()
     var selectedBrand: String = ""
@@ -39,6 +40,22 @@ class BeanieEditDeviceViewController: UIViewController, UIPickerViewDelegate, UI
         
         brandPickerData = ["Samsung", "Apple", "Huawei", "Xiaomi", "Oppo"]
         osPickerData = ["iOS", "Android", "Other OS"]
+        
+        if let currentDevice = BeanieStore.shared.findDevice(deviceId: deviceId) {
+            self.nameTextField.text = currentDevice.name
+            self.modelTextField.text = currentDevice.model
+//            if let row = self.storeItems.firstIndex(where: {$0.id == deviceId}) {
+            if let brandIndex = brandPickerData.firstIndex(where: {$0 == currentDevice.brand}) {
+               self.brandPickerView.selectRow(brandIndex, inComponent: 0, animated: true)
+            }
+            if let osIndex = osPickerData.firstIndex(where: {$0 == currentDevice.operating_system}) {
+               self.osPickerView.selectRow(osIndex, inComponent: 0, animated: true)
+            }
+            
+            // Add logic for datepicker in the future
+
+        
+        }
         // Do any additional setup after loading the view.
     }
     

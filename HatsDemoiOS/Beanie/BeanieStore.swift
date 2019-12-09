@@ -45,5 +45,10 @@ class BeanieStore
         NotificationCenter.default.post(name: .reload, object: nil)
     }
     
+    public func findDevice(deviceId: Int) -> BeanieDevice?{
+        return self.storeItems.first { (BeanieDevice) -> Bool in
+            BeanieDevice.id == deviceId
+        }
+    }
     
 }
