@@ -51,4 +51,12 @@ class BeanieStore
         }
     }
     
+    public func updateDevice(deviceId: Int, name: String, brand: String, model: String, operating_system: String, user_group: String, purchase_date: Date){
+        if let row = self.storeItems.firstIndex(where: {$0.id == deviceId}) {
+            self.storeItems[row] = BeanieDevice(id: deviceId, name: name, brand: brand, model: model, operating_system: operating_system, user_group: user_group, purchase_date: purchase_date, isDeleted: false)
+        }
+        
+        NotificationCenter.default.post(name: .reload, object: nil)
+    }
+    
 }

@@ -42,12 +42,16 @@ class BeanieEditDeviceViewController: UIViewController, UIPickerViewDelegate, UI
         osPickerData = ["iOS", "Android", "Other OS"]
         
         if let currentDevice = BeanieStore.shared.findDevice(deviceId: deviceId) {
+            inputName = currentDevice.name
             self.nameTextField.text = currentDevice.name
+            inputModel = currentDevice.model
             self.modelTextField.text = currentDevice.model
 //            if let row = self.storeItems.firstIndex(where: {$0.id == deviceId}) {
+            selectedBrand = currentDevice.brand
             if let brandIndex = brandPickerData.firstIndex(where: {$0 == currentDevice.brand}) {
                self.brandPickerView.selectRow(brandIndex, inComponent: 0, animated: true)
             }
+            selectedOS = currentDevice.operating_system
             if let osIndex = osPickerData.firstIndex(where: {$0 == currentDevice.operating_system}) {
                self.osPickerView.selectRow(osIndex, inComponent: 0, animated: true)
             }
@@ -118,19 +122,19 @@ class BeanieEditDeviceViewController: UIViewController, UIPickerViewDelegate, UI
     
     @IBAction func editDeviceTapped(_ sender: Any) {
         
-        let newDevice = BeanieDevice(id: BeanieStore.shared.storeItems.count + 1, name: inputName, brand: selectedBrand, model: inputModel, operating_system: selectedOS, user_group: hatsUserGroupSwitch.isOn ? "HATS" : "None" , purchase_date: deviceDatePicker.date)
+        BeanieStore.shared.updateDevice(deviceId: deviceId, name: inputName, brand: selectedBrand, model: inputModel, operating_system: selectedOS, user_group: hatsUserGroupSwitch.isOn ? "HATS" : "None", purchase_date: deviceDatePicker.date)
+    
+//        if let stack = self.navigationController?.viewControllers {
+//            if (stack.count > 1) {
+//                let previousController = stack[stack.count-2] as! BeanieItemsCollectionViewController
+//           previousController.deviceCollectionView.reloadData()
+//                //            if let previosController == Beanie
+//
+//            }
+//        }
         
-        BeanieStore.shared.addNewDevice(device: newDevice)
-        if let stack = self.navigationController?.viewControllers {
-            if (stack.count > 1) {
-                let previousController = stack[stack.count-2] as! BeanieItemsCollectionViewController
-                previousController.deviceCollectionView.reloadData()
-                //            if let previosController == Beanie
-                
-            }
-        }
-        
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
         
     }
 }
